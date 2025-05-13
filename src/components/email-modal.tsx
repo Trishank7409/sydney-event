@@ -69,7 +69,11 @@ export function EmailModal({ event, onClose, onSubmit }: EmailModalProps) {
             </div>
 
             <div className="flex items-center space-x-2">
-              <Checkbox id="opt-in" checked={optIn} onCheckedChange={(checked) => setOptIn(checked as any)} />
+              <Checkbox id="opt-in" checked={optIn} onCheckedChange={(checked) => {
+              if (typeof checked === 'boolean') {
+                setOptIn(checked);
+              }
+            }} />
               <Label htmlFor="opt-in" className="text-sm">
                 Send me updates about upcoming events in Sydney
               </Label>

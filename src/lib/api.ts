@@ -1,4 +1,4 @@
-import type { Event } from "@/types/event"
+import type { Event,RawEvent } from "@/types/event"
 
 
 import axios from "axios";
@@ -18,7 +18,7 @@ export async function fetchEvents(): Promise<Event[]> {
 
     const eventsData = res.data._embedded?.events || [];
 
-    const events: Event[] = eventsData.map((e: any) => ({
+    const events: Event[] = eventsData.map((e: RawEvent) => ({
       id: e.id,
       title: e.name,
       date: e.dates?.start?.dateTime || "No date available",
@@ -34,7 +34,7 @@ export async function fetchEvents(): Promise<Event[]> {
     console.dir(eventsData[0], { depth: null });
     return events;
   } catch (error) {
-    console.error("Error scraping events:");
+    console.error("Error scraping events:",error);
     return [];
   }
 }

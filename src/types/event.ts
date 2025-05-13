@@ -10,3 +10,29 @@ export interface Event {
   price: number
   ticketUrl: string
 }
+export interface RawEvent {
+  id: string;
+  name: string;
+  dates?: {
+    start?: {
+      dateTime?: string;
+    };
+  };
+  images?: {
+    url: string;
+  }[];
+  url?: string;
+  classifications?: {
+    segment?: {
+      name?: string;
+    };
+  }[];
+  priceRanges?: {
+    min?: number;
+  }[];
+  _embedded?: {
+    venues?: {
+      name?: string;
+    }[];
+  };
+}

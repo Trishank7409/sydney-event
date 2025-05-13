@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Calendar, MapPin } from "lucide-react"
 import operaImg from "@/assets/opera-house.jpg"
 import  {Button}  from "@/components/ui/button"
+import Image from "next/image"
 
 export function Hero() {
   return (
@@ -11,10 +12,10 @@ export function Hero() {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Discover Sydney's Best Events
+                Discover Sydney&apos;s Best Events
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                Find and book the hottest events in Sydney. From concerts to exhibitions, we've got you covered.
+                Find and book the hottest events in Sydney. From concerts to exhibitions, we&apos;ve got you covered.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -42,7 +43,7 @@ export function Hero() {
           </div>
           <div className="hidden lg:block">
             <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover">
-              <img
+              <Image
                 alt="Sydney Opera House"
                 src={operaImg.src}
                 className="h-full w-full object-cover"
