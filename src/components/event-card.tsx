@@ -5,7 +5,7 @@ import { formatDate } from "@/lib/utils"
 import type { Event } from "@/types/event"
 import  {Button}  from "@/components/ui/button"
 import  Badge  from "@/components/ui/badge"
-import Image from "next/image"
+// import Image from "next/image"
 // import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 interface EventCardProps {
@@ -19,7 +19,7 @@ export function EventCard({ event, onGetTickets }: EventCardProps) {
   return (
     <div className="overflow-hidden transition-all hover:shadow-lg">
       <div className="aspect-[16/9] w-full overflow-hidden">
-        <Image
+        <img
           src={image || "/placeholder.svg?height=225&width=400"}
           alt={title}
           className="h-full w-full object-cover transition-transform hover:scale-105"

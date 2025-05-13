@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Calendar, MapPin } from "lucide-react"
 import operaImg from "@/assets/opera-house.jpg"
 import  {Button}  from "@/components/ui/button"
-import Image from "next/image"
+// import Image from "next/image"
 
 export function Hero() {
   return (
@@ -43,7 +43,7 @@ export function Hero() {
           </div>
           <div className="hidden lg:block">
             <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover">
-              <Image
+              <img
                 alt="Sydney Opera House"
                 src={operaImg.src}
                 className="h-full w-full object-cover"
